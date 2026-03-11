@@ -1,0 +1,139 @@
+{
+  "header": {
+    "about": "About",
+    "work": "Work",
+    "stack": "Stack",
+    "education": "Education",
+    "contact": "Contact",
+    "downloadCV": "Download CV",
+    "lab": "HiramLab"
+  },
+  "hero": {
+    "name": "Hiram Acevedo",
+    "subtitle": "Fullstack Developer · AI & LLM Integration",
+    "tagline": "Building end-to-end solutions from medical systems to AI-powered language tools. 21+ shipped projects.",
+    "downloadCV": "Download CV",
+    "contactMe": "Contact Me"
+  },
+  "about": {
+    "title": "About",
+    "p1": "Fullstack Web Developer with 21+ shipped projects, from production medical systems to AI-powered language learning tools. I build end-to-end solutions with Next.js, Python/FastAPI, Java/Spring Boot, and run local LLM inference pipelines on Apple Silicon.",
+    "p2": "Currently finishing my CS degree at Universidad de Guadalajara (GPA 95.64/100) and completing Oracle Academy + TCS Empowers programs.",
+    "founder": "Founder",
+    "founderAt": "@HiramLab",
+    "stats": {
+      "projects": "21+",
+      "projectsLabel": "Shipped Projects",
+      "gpa": "95.64",
+      "gpaLabel": "GPA / 100",
+      "oracle": "300+",
+      "oracleLabel": "Hours Oracle ONE",
+      "patients": "200+",
+      "patientsLabel": "Patients Managed"
+    }
+  },
+  "projects": {
+    "title": "Featured Work",
+    "viewLive": "Live",
+    "viewRepo": "Code",
+    "items": {
+      "endopolis": {
+        "name": "Endopolis",
+        "hook": "Production medical system — 200+ patients, 80% time reduction in scheduling"
+      },
+      "hanziflow": {
+        "name": "HanziFlow",
+        "hook": "6-tool ecosystem for Mandarin learning with local AI on Apple Silicon"
+      },
+      "supplie": {
+        "name": "Supplie.me",
+        "hook": "SaaS e-commerce platform with role-based auth and admin panel"
+      },
+      "eventmanager": {
+        "name": "EventManager",
+        "hook": "Event management system with guest tracking and visual calendar"
+      },
+      "movieCatalog": {
+        "name": "Movie Catalog",
+        "hook": "Full REST API with Angular frontend and Laravel backend"
+      },
+      "hospitalSystem": {
+        "name": "Hospital System",
+        "hook": "Java/Spring Boot backend with React frontend for appointment management"
+      }
+    }
+  },
+  "stack": {
+    "title": "Tech Stack",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "dataAi": "Data & AI",
+    "devops": "DevOps",
+    "design": "Design"
+  },
+  "education": {
+    "title": "Education & Certifications",
+    "items": {
+      "udg": {
+        "title": "B.S. Web Systems Development",
+        "org": "Universidad de Guadalajara",
+        "detail": "GPA 95.64/100 · 4-year degree in 3 years",
+        "date": "2024 – Dec 2026"
+      },
+      "oracle": {
+        "title": "Oracle ONE Next Education",
+        "org": "Alura Latam",
+        "detail": "300+ hrs · Java, Spring Boot, SQL, OCI",
+        "date": "2024"
+      },
+      "oracleAcademy": {
+        "title": "Java Fundamentals",
+        "org": "Oracle Academy",
+        "detail": "Java core programming",
+        "date": "In progress"
+      },
+      "tcs": {
+        "title": "TCS Empowers",
+        "org": "TATA Consultancy Services",
+        "detail": "Java, AI, Data Analysis, Communication",
+        "date": "2025 – 2026"
+      },
+      "toefl": {
+        "title": "TOEFL ITP — 567 pts (B2)",
+        "org": "PROULEX UDG",
+        "detail": "Listening 56, Structure 55, Reading 59",
+        "date": "May 2024"
+      },
+      "certs": {
+        "title": "50+ Technical Certifications",
+        "org": "TecNM, Alura, Oracle",
+        "detail": "Java, SQL, AI, Cloud Infrastructure",
+        "date": "2024 – 2025"
+      }
+    }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Have a project in mind or want to work together? Drop me a message.",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "success": "Message sent successfully! I'll get back to you soon.",
+    "error": "Something went wrong. Please try again or email me directly.",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "you@example.com",
+    "messagePlaceholder": "Tell me about your project..."
+  },
+  "footer": {
+    "copyright": "© 2026 Hiram Acevedo. All rights reserved.",
+    "builtWith": "Built with Next.js & Tailwind CSS"
+  },
+  "localeSuggester": {
+    "suggest": "¿Prefieres español?",
+    "switch": "Cambiar",
+    "suggestEn": "Prefer English?",
+    "switchEn": "Switch"
+  }
+}

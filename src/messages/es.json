@@ -1,0 +1,139 @@
+{
+  "header": {
+    "about": "Acerca",
+    "work": "Proyectos",
+    "stack": "Stack",
+    "education": "Educación",
+    "contact": "Contacto",
+    "downloadCV": "Descargar CV",
+    "lab": "HiramLab"
+  },
+  "hero": {
+    "name": "Hiram Acevedo",
+    "subtitle": "Desarrollador Fullstack · Integración de IA y LLMs",
+    "tagline": "Construyendo soluciones end-to-end desde sistemas médicos hasta herramientas de aprendizaje con IA. 21+ proyectos entregados.",
+    "downloadCV": "Descargar CV",
+    "contactMe": "Contáctame"
+  },
+  "about": {
+    "title": "Acerca de Mí",
+    "p1": "Desarrollador Web Fullstack con 21+ proyectos entregados, desde sistemas médicos en producción hasta herramientas de aprendizaje con IA. Construyo soluciones end-to-end con Next.js, Python/FastAPI, Java/Spring Boot, y ejecuto pipelines de inferencia LLM local en Apple Silicon.",
+    "p2": "Actualmente terminando mi carrera en la Universidad de Guadalajara (Promedio 95.64/100) y completando los programas Oracle Academy y TCS Empowers.",
+    "founder": "Fundador",
+    "founderAt": "@HiramLab",
+    "stats": {
+      "projects": "21+",
+      "projectsLabel": "Proyectos Entregados",
+      "gpa": "95.64",
+      "gpaLabel": "Promedio / 100",
+      "oracle": "300+",
+      "oracleLabel": "Horas Oracle ONE",
+      "patients": "200+",
+      "patientsLabel": "Pacientes Gestionados"
+    }
+  },
+  "projects": {
+    "title": "Proyectos Destacados",
+    "viewLive": "Demo",
+    "viewRepo": "Código",
+    "items": {
+      "endopolis": {
+        "name": "Endopolis",
+        "hook": "Sistema médico en producción — 200+ pacientes, 80% reducción en tiempo de agendamiento"
+      },
+      "hanziflow": {
+        "name": "HanziFlow",
+        "hook": "Ecosistema de 6 herramientas para aprender mandarín con IA local en Apple Silicon"
+      },
+      "supplie": {
+        "name": "Supplie.me",
+        "hook": "Plataforma SaaS e-commerce con autenticación por roles y panel admin"
+      },
+      "eventmanager": {
+        "name": "EventManager",
+        "hook": "Sistema de gestión de eventos con seguimiento de invitados y calendario visual"
+      },
+      "movieCatalog": {
+        "name": "Catálogo de Películas",
+        "hook": "API REST completa con frontend Angular y backend Laravel"
+      },
+      "hospitalSystem": {
+        "name": "Sistema Hospitalario",
+        "hook": "Backend Java/Spring Boot con frontend React para gestión de citas"
+      }
+    }
+  },
+  "stack": {
+    "title": "Stack Tecnológico",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "dataAi": "Datos e IA",
+    "devops": "DevOps",
+    "design": "Diseño"
+  },
+  "education": {
+    "title": "Educación y Certificaciones",
+    "items": {
+      "udg": {
+        "title": "Lic. Desarrollo de Sistemas Web",
+        "org": "Universidad de Guadalajara",
+        "detail": "Promedio 95.64/100 · Carrera de 4 años en 3",
+        "date": "2024 – Dic 2026"
+      },
+      "oracle": {
+        "title": "Oracle ONE Next Education",
+        "org": "Alura Latam",
+        "detail": "300+ hrs · Java, Spring Boot, SQL, OCI",
+        "date": "2024"
+      },
+      "oracleAcademy": {
+        "title": "Java Fundamentals",
+        "org": "Oracle Academy",
+        "detail": "Programación core en Java",
+        "date": "En progreso"
+      },
+      "tcs": {
+        "title": "TCS Empowers",
+        "org": "TATA Consultancy Services",
+        "detail": "Java, IA, Análisis de Datos, Comunicación",
+        "date": "2025 – 2026"
+      },
+      "toefl": {
+        "title": "TOEFL ITP — 567 pts (B2)",
+        "org": "PROULEX UDG",
+        "detail": "Listening 56, Structure 55, Reading 59",
+        "date": "Mayo 2024"
+      },
+      "certs": {
+        "title": "50+ Certificaciones Técnicas",
+        "org": "TecNM, Alura, Oracle",
+        "detail": "Java, SQL, IA, Infraestructura Cloud",
+        "date": "2024 – 2025"
+      }
+    }
+  },
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "¿Tienes un proyecto en mente o quieres trabajar juntos? Envíame un mensaje.",
+    "name": "Nombre",
+    "email": "Correo",
+    "message": "Mensaje",
+    "send": "Enviar Mensaje",
+    "sending": "Enviando...",
+    "success": "¡Mensaje enviado con éxito! Te responderé pronto.",
+    "error": "Algo salió mal. Intenta de nuevo o escríbeme directamente.",
+    "namePlaceholder": "Tu nombre",
+    "emailPlaceholder": "tu@ejemplo.com",
+    "messagePlaceholder": "Cuéntame sobre tu proyecto..."
+  },
+  "footer": {
+    "copyright": "© 2026 Hiram Acevedo. Todos los derechos reservados.",
+    "builtWith": "Hecho con Next.js y Tailwind CSS"
+  },
+  "localeSuggester": {
+    "suggest": "¿Prefieres español?",
+    "switch": "Cambiar",
+    "suggestEn": "Prefer English?",
+    "switchEn": "Switch"
+  }
+}

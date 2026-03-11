@@ -1,8 +1,27 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, Github } from "lucide-react";
+import {
+  ExternalLink,
+  Github,
+  Stethoscope,
+  Languages,
+  ShoppingCart,
+  Calendar,
+  Film,
+  Hospital,
+  type LucideIcon,
+} from "lucide-react";
 import type { Project } from "@/lib/projects";
+
+const iconMap: Record<string, LucideIcon> = {
+  Stethoscope,
+  Languages,
+  ShoppingCart,
+  Calendar,
+  Film,
+  Hospital,
+};
 
 interface ProjectCardProps {
   project: Project;
@@ -21,6 +40,8 @@ export default function ProjectCard({
   viewRepo,
   index,
 }: ProjectCardProps) {
+  const Icon = iconMap[project.icon];
+
   return (
     <motion.article
       initial={{ opacity: 0, y: 30 }}
@@ -32,9 +53,13 @@ export default function ProjectCard({
       {/* Thumbnail placeholder */}
       <div className="h-36 bg-gradient-to-br from-[var(--surface-2)] to-[var(--surface-1)] flex items-center justify-center relative overflow-hidden">
         <div className="absolute inset-0 bg-[var(--accent)]/5" />
-        <span className="text-4xl font-bold text-[var(--ink)]/10 font-[family-name:var(--font-heading)]">
-          {name.charAt(0)}
-        </span>
+        {Icon ? (
+          <Icon size={32} className="text-[var(--ink)]/20" />
+        ) : (
+          <span className="text-4xl font-bold text-[var(--ink)]/10 font-[family-name:var(--font-heading)]">
+            {name.charAt(0)}
+          </span>
+        )}
       </div>
 
       <div className="flex flex-col flex-1 p-5 gap-3">

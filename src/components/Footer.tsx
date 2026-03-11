@@ -2,28 +2,11 @@
 
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useTheme } from "@/hooks/useTheme";
 
 export default function Footer() {
   const t = useTranslations("footer");
-  const [theme, setTheme] = useState<"light" | "dark">("light");
-
-  useEffect(() => {
-    const check = () => {
-      setTheme(
-        document.documentElement.getAttribute("data-theme") === "dark"
-          ? "dark"
-          : "light"
-      );
-    };
-    check();
-    const observer = new MutationObserver(check);
-    observer.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ["data-theme"],
-    });
-    return () => observer.disconnect();
-  }, []);
+  const theme = useTheme();
 
   return (
     <footer className="border-t border-[var(--accent)] bg-[var(--surface-1)]">

@@ -95,7 +95,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 3.2, duration: 0.5 }}
-        className="absolute bottom-8"
+        className="absolute bottom-6 md:bottom-16"
       >
         <a
           href="#about"

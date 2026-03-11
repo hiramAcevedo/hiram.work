@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { getTechBrand } from "@/lib/techBrands";
 
 const stackData = {
   frontend: [
@@ -33,8 +34,37 @@ const stackData = {
     "SQLite",
   ],
   devops: ["Vercel", "Railway", "Git", "Docker", "Linux"],
-  design: ["Affinity Designer", "Affinity Photo", "Figma"],
+  design: ["Affinity", "Photoshop", "Illustrator", "Figma"],
 };
+
+function TechBadge({ tech }: { tech: string }) {
+  const brand = getTechBrand(tech);
+
+  return (
+    <span
+      className="group/badge inline-flex items-center gap-2 px-3 py-1.5 text-sm bg-[var(--surface-1)] border border-[var(--border)] rounded-lg hover:bg-[var(--surface-2)] transition-all duration-200 cursor-default font-[family-name:var(--font-code)]"
+      style={
+        {
+          "--brand-color": brand?.color ?? "var(--accent)",
+        } as React.CSSProperties
+      }
+    >
+      {brand && (
+        <svg
+          viewBox="0 0 24 24"
+          width={14}
+          height={14}
+          className="shrink-0 fill-[var(--ink)]/40 group-hover/badge:fill-[var(--brand-color)] transition-colors duration-200"
+        >
+          <path d={brand.path} />
+        </svg>
+      )}
+      <span className="group-hover/badge:text-[var(--brand-color)] transition-colors duration-200">
+        {tech}
+      </span>
+    </span>
+  );
+}
 
 export default function TechStack() {
   const t = useTranslations("stack");
@@ -68,12 +98,7 @@ export default function TechStack() {
               </h3>
               <div className="flex flex-wrap gap-2">
                 {stackData[category].map((tech) => (
-                  <span
-                    key={tech}
-                    className="px-3 py-1.5 text-sm bg-[var(--surface-1)] border border-[var(--border)] rounded-lg hover:border-[var(--accent)] hover:bg-[var(--surface-2)] transition-colors cursor-default font-[family-name:var(--font-code)]"
-                  >
-                    {tech}
-                  </span>
+                  <TechBadge key={tech} tech={tech} />
                 ))}
               </div>
             </motion.div>

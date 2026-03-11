@@ -97,7 +97,7 @@ export default function LogoHA({ size, className = "" }: LogoHAProps) {
           </clipPath>
           <g clipPath="url(#logoha-clip1)">
             <g transform="matrix(0.235847,-0.815171,0.202185,0.223378,301.657441,904.516094)">
-              <path d="M490,574L404,369L319,642L490,574Z" fill="white" />
+              <path d="M490,574L404,369L319,642L490,574Z" fill="var(--logo-frame-fill)" />
             </g>
           </g>
         </g>
@@ -256,7 +256,7 @@ function StaticLogo() {
         </clipPath>
         <g clipPath="url(#logoha-clip1-static)">
           <g transform="matrix(0.235847,-0.815171,0.202185,0.223378,301.657441,904.516094)">
-            <path d="M490,574L404,369L319,642L490,574Z" fill="white" />
+            <path d="M490,574L404,369L319,642L490,574Z" fill="var(--logo-frame-fill)" />
           </g>
         </g>
       </g>

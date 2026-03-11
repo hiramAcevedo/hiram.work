@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import ThemeToggle from "./ThemeToggle";
 import LocaleSwitch from "./LocaleSwitch";
 import Image from "next/image";
+import { useTheme } from "@/hooks/useTheme";
 
 const navItems = ["about", "work", "stack", "education", "contact"] as const;
 
@@ -14,29 +15,12 @@ export default function Header() {
   const t = useTranslations("header");
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [theme, setTheme] = useState<"light" | "dark">("light");
+  const theme = useTheme();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  useEffect(() => {
-    const check = () => {
-      setTheme(
-        document.documentElement.getAttribute("data-theme") === "dark"
-          ? "dark"
-          : "light"
-      );
-    };
-    check();
-    const observer = new MutationObserver(check);
-    observer.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ["data-theme"],
-    });
-    return () => observer.disconnect();
   }, []);
 
   return (
@@ -67,7 +51,7 @@ export default function Header() {
             <a
               key={item}
               href={`#${item}`}
-              className="text-sm font-medium text-[var(--ink)]/70 hover:text-[var(--ink)] transition-colors font-[family-name:var(--font-heading)]"
+              className="text-base font-medium text-[var(--ink)]/70 hover:text-[var(--ink)] transition-colors font-[family-name:var(--font-heading)]"
             >
               {t(item)}
             </a>
@@ -76,7 +60,7 @@ export default function Header() {
             href="https://hiramlab.center"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm font-medium text-[var(--accent)] hover:opacity-80 transition-opacity font-[family-name:var(--font-heading)]"
+            className="text-base font-medium text-[var(--accent)] hover:opacity-80 transition-opacity font-[family-name:var(--font-heading)]"
           >
             {t("lab")}
           </a>
@@ -85,14 +69,22 @@ export default function Header() {
         <div className="hidden md:flex items-center justify-end gap-3">
           <LocaleSwitch />
           <ThemeToggle />
-          <a
-            href="/cv/Hiram_Acevedo_CV.pdf"
-            download
-            className="flex items-center gap-2 h-9 px-4 bg-[var(--accent)] text-white text-sm font-semibold rounded-lg hover:opacity-90 transition-opacity font-[family-name:var(--font-heading)]"
-          >
-            <Download size={14} />
-            {t("downloadCV")}
-          </a>
+          <AnimatePresence>
+            {scrolled && (
+              <motion.a
+                href="/cv/Hiram_Acevedo_CV.pdf"
+                download
+                initial={{ opacity: 0, scale: 0.9, width: 0 }}
+                animate={{ opacity: 1, scale: 1, width: "auto" }}
+                exit={{ opacity: 0, scale: 0.9, width: 0 }}
+                transition={{ duration: 0.2 }}
+                className="flex items-center gap-2 h-9 px-4 bg-[var(--accent)] text-white text-sm font-semibold rounded-lg hover:opacity-90 transition-opacity font-[family-name:var(--font-heading)] overflow-hidden whitespace-nowrap"
+              >
+                <Download size={14} />
+                {t("downloadCV")}
+              </motion.a>
+            )}
+          </AnimatePresence>
         </div>
 
         <button

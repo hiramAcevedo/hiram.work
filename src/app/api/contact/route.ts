@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod/v4";
-import { resend } from "@/lib/resend";
+import { getResend } from "@/lib/resend";
 
 const schema = z.object({
   name: z.string().min(1).max(100),
@@ -36,6 +36,7 @@ export async function POST(request: NextRequest) {
       }
     }
 
+    const resend = getResend();
     await resend.emails.send({
       from: "Contact Form <contact@hiram.work>",
       to: "hiram@hiram.work",

@@ -2,9 +2,10 @@ import { setRequestLocale } from "next-intl/server";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
+import Experience from "@/components/Experience";
+import Education from "@/components/Education";
 import Projects from "@/components/Projects";
 import TechStack from "@/components/TechStack";
-import Education from "@/components/Education";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import LocaleSuggester from "@/components/LocaleSuggester";
@@ -53,9 +54,10 @@ export default async function Home({
       <main id="main">
         <Hero />
         <About />
+        <Experience />
+        <Education />
         <Projects />
         <TechStack />
-        <Education />
         <Contact />
       </main>
       <Footer />

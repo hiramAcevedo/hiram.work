@@ -32,7 +32,7 @@ export default function About() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.1, duration: 0.5 }}
-          className="space-y-4 text-[var(--ink)]/70 text-base md:text-lg leading-relaxed max-w-3xl"
+          className="space-y-4 text-[var(--ink)]/70 text-lg md:text-xl leading-relaxed max-w-3xl"
         >
           <p>{t("p1")}</p>
           <p>{t("p2")}</p>
@@ -66,7 +66,7 @@ export default function About() {
               <div className="text-3xl md:text-4xl font-bold text-[var(--accent)] font-[family-name:var(--font-heading)]">
                 {stat.value}
               </div>
-              <div className="text-sm text-[var(--ink)]/50 mt-1">
+              <div className="text-base text-[var(--ink)]/50 mt-1">
                 {stat.label}
               </div>
             </motion.div>

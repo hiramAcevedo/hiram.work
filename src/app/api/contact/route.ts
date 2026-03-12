@@ -6,6 +6,14 @@ const schema = z.object({
   name: z.string().min(1).max(100),
   email: z.email(),
   message: z.string().min(10).max(2000),
+  subject: z.string().max(200).optional(),
+  meta: z
+    .object({
+      company: z.string().max(100).optional(),
+      projectType: z.string().max(100).optional(),
+      budget: z.string().max(50).optional(),
+    })
+    .optional(),
 });
 
 export async function POST(request: NextRequest) {
@@ -20,7 +28,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const { name, email, message } = result.data;
+    const { name, email, message, subject, meta } = result.data;
 
     // Rate limiting (only if Upstash is configured)
     if (process.env.UPSTASH_REDIS_REST_URL) {
@@ -36,13 +44,20 @@ export async function POST(request: NextRequest) {
       }
     }
 
+    // Build email body with optional metadata
+    let text = `Name: ${name}\nEmail: ${email}`;
+    if (meta?.company) text += `\nCompany: ${meta.company}`;
+    if (meta?.projectType) text += `\nProject Type: ${meta.projectType}`;
+    if (meta?.budget) text += `\nBudget: ${meta.budget}`;
+    text += `\n\nMessage:\n${message}`;
+
     const resend = getResend();
     await resend.emails.send({
       from: "Contact Form <contact@hiram.work>",
       to: "hiram@hiram.work",
-      subject: `New message from ${name}`,
+      subject: subject || `New message from ${name}`,
       replyTo: email,
-      text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
+      text,
     });
 
     return NextResponse.json({ success: true });

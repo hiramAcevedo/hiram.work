@@ -1,9 +1,10 @@
 {
   "header": {
     "about": "Acerca",
+    "experience": "Experiencia",
+    "education": "Educación",
     "work": "Proyectos",
     "stack": "Stack",
-    "education": "Educación",
     "contact": "Contacto",
     "downloadCV": "Descargar CV",
     "lab": "HiramLab"
@@ -30,6 +31,41 @@
       "oracleLabel": "Horas Oracle ONE",
       "patients": "200+",
       "patientsLabel": "Pacientes Gestionados"
+    }
+  },
+  "experience": {
+    "title": "Experiencia",
+    "items": {
+      "hiramlab": {
+        "role": "Fundador y Desarrollador Principal",
+        "org": "HiramLab",
+        "date": "2024 – Presente",
+        "bullets": [
+          "Laboratorio personal de I+D explorando IA local, arquitectura modular y herramientas open-source",
+          "Creé HanziFlow: ecosistema de 6 herramientas para aprender mandarín con LLM local en Apple Silicon",
+          "Diseñé infraestructura de marca dual (hiram.work + hiramlab.center) con Next.js 16 e i18n"
+        ]
+      },
+      "endopolis": {
+        "role": "Desarrollador Fullstack Principal",
+        "org": "Endopolis — Plataforma Médica",
+        "date": "2024 – Presente",
+        "bullets": [
+          "Sistema en producción sirviendo 200+ pacientes con agendamiento de citas y expedientes clínicos",
+          "Redujo el tiempo de agendamiento en 80% mediante workflows automatizados e integración de calendario",
+          "Full-stack: Next.js, TypeScript, Prisma ORM, PostgreSQL, Tailwind CSS"
+        ]
+      },
+      "freelance": {
+        "role": "Desarrollador Fullstack",
+        "org": "Proyectos Independientes",
+        "date": "2023 – Presente",
+        "bullets": [
+          "21+ proyectos entregados: plataformas SaaS, APIs REST, e-commerce, gestión de eventos y herramientas de IA",
+          "Rango tecnológico: Java/Spring Boot, Python/FastAPI, React, Angular, Laravel, MySQL, MongoDB",
+          "Clientes incluyen Supplie.me (SaaS e-commerce con roles) y EventManager (plataforma de seguimiento de eventos)"
+        ]
+      }
     }
   },
   "projects": {
@@ -114,17 +150,28 @@
   },
   "contact": {
     "title": "Contacto",
-    "subtitle": "¿Tienes un proyecto en mente o quieres trabajar juntos? Envíame un mensaje.",
+    "subtitle": "Ya sea que estés contratando o necesites un proyecto — hablemos.",
+    "tabHiring": "Contratación",
+    "tabProject": "Proyecto",
     "name": "Nombre",
     "email": "Correo",
+    "company": "Empresa",
+    "companyPlaceholder": "Acme Corp",
     "message": "Mensaje",
     "send": "Enviar Mensaje",
     "sending": "Enviando...",
     "success": "¡Mensaje enviado con éxito! Te responderé pronto.",
     "error": "Algo salió mal. Intenta de nuevo o escríbeme directamente.",
+    "optional": "opcional",
     "namePlaceholder": "Tu nombre",
     "emailPlaceholder": "tu@ejemplo.com",
-    "messagePlaceholder": "Cuéntame sobre tu proyecto..."
+    "hiringMessagePlaceholder": "Cuéntame sobre el puesto, tu equipo, o lo que buscas...",
+    "projectType": "Tipo de Proyecto",
+    "selectProjectType": "Selecciona un tipo...",
+    "budget": "Rango de Presupuesto",
+    "selectBudget": "Selecciona rango...",
+    "projectDescription": "Descripción del Proyecto",
+    "projectMessagePlaceholder": "Describe tu proyecto: objetivos, timeline y requerimientos específicos..."
   },
   "footer": {
     "copyright": "© 2026 Hiram Acevedo. Todos los derechos reservados.",

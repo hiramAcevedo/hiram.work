@@ -22,12 +22,12 @@ export default function Footer() {
             width={24}
             height={24}
           />
-          <span className="text-sm text-[var(--ink)]/50">
+          <span className="text-base text-[var(--ink)]/50">
             {t("copyright")}
           </span>
         </div>
 
-        <div className="flex items-center gap-6 text-sm text-[var(--ink)]/40">
+        <div className="flex items-center gap-6 text-base text-[var(--ink)]/40">
           <a
             href="https://github.com/hiramAcevedo"
             target="_blank"

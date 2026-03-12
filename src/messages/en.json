@@ -1,9 +1,10 @@
 {
   "header": {
     "about": "About",
+    "experience": "Experience",
+    "education": "Education",
     "work": "Work",
     "stack": "Stack",
-    "education": "Education",
     "contact": "Contact",
     "downloadCV": "Download CV",
     "lab": "HiramLab"
@@ -30,6 +31,41 @@
       "oracleLabel": "Hours Oracle ONE",
       "patients": "200+",
       "patientsLabel": "Patients Managed"
+    }
+  },
+  "experience": {
+    "title": "Experience",
+    "items": {
+      "hiramlab": {
+        "role": "Founder & Lead Developer",
+        "org": "HiramLab",
+        "date": "2024 – Present",
+        "bullets": [
+          "Personal R&D lab exploring local AI, modular architecture, and open-source tooling",
+          "Built HanziFlow: 6-tool Mandarin learning ecosystem with local LLM inference on Apple Silicon",
+          "Architected dual-site brand infrastructure (hiram.work + hiramlab.center) with Next.js 16 and i18n"
+        ]
+      },
+      "endopolis": {
+        "role": "Lead Fullstack Developer",
+        "org": "Endopolis — Medical Platform",
+        "date": "2024 – Present",
+        "bullets": [
+          "Production system serving 200+ patients with appointment scheduling and clinical records",
+          "Reduced scheduling time by 80% through automated workflows and calendar integration",
+          "Full-stack: Next.js, TypeScript, Prisma ORM, PostgreSQL, Tailwind CSS"
+        ]
+      },
+      "freelance": {
+        "role": "Fullstack Developer",
+        "org": "Independent Projects",
+        "date": "2023 – Present",
+        "bullets": [
+          "Delivered 21+ projects: SaaS platforms, REST APIs, e-commerce, event management, and AI tools",
+          "Tech range: Java/Spring Boot, Python/FastAPI, React, Angular, Laravel, MySQL, MongoDB",
+          "Clients include Supplie.me (role-based e-commerce SaaS) and EventManager (event tracking platform)"
+        ]
+      }
     }
   },
   "projects": {
@@ -114,17 +150,28 @@
   },
   "contact": {
     "title": "Get in Touch",
-    "subtitle": "Have a project in mind or want to work together? Drop me a message.",
+    "subtitle": "Whether you're hiring or need a project built — let's talk.",
+    "tabHiring": "Hiring / Recruiting",
+    "tabProject": "Project Inquiry",
     "name": "Name",
     "email": "Email",
+    "company": "Company",
+    "companyPlaceholder": "Acme Corp",
     "message": "Message",
     "send": "Send Message",
     "sending": "Sending...",
     "success": "Message sent successfully! I'll get back to you soon.",
     "error": "Something went wrong. Please try again or email me directly.",
+    "optional": "optional",
     "namePlaceholder": "Your name",
     "emailPlaceholder": "you@example.com",
-    "messagePlaceholder": "Tell me about your project..."
+    "hiringMessagePlaceholder": "Tell me about the role, your team, or what you're looking for...",
+    "projectType": "Project Type",
+    "selectProjectType": "Select a type...",
+    "budget": "Budget Range",
+    "selectBudget": "Select range...",
+    "projectDescription": "Project Description",
+    "projectMessagePlaceholder": "Describe your project: goals, timeline, and any specific requirements..."
   },
   "footer": {
     "copyright": "© 2026 Hiram Acevedo. All rights reserved.",

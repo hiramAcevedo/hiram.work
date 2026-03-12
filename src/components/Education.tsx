@@ -62,17 +62,17 @@ export default function Education() {
 
                   <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
                     <div>
-                      <h3 className="font-bold font-[family-name:var(--font-heading)] text-lg">
+                      <h3 className="font-bold font-[family-name:var(--font-heading)] text-xl">
                         {t(`items.${key}.title`)}
                       </h3>
-                      <p className="text-sm text-[var(--accent)] font-medium">
+                      <p className="text-base text-[var(--accent)] font-medium">
                         {t(`items.${key}.org`)}
                       </p>
-                      <p className="text-sm text-[var(--ink)]/50 mt-0.5">
+                      <p className="text-base text-[var(--ink)]/50 mt-0.5">
                         {t(`items.${key}.detail`)}
                       </p>
                     </div>
-                    <span className="text-xs text-[var(--ink)]/40 font-[family-name:var(--font-code)] whitespace-nowrap">
+                    <span className="text-sm text-[var(--ink)]/40 font-[family-name:var(--font-code)] whitespace-nowrap">
                       {t(`items.${key}.date`)}
                     </span>
                   </div>

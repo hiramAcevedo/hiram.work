@@ -42,7 +42,7 @@ function TechBadge({ tech }: { tech: string }) {
 
   return (
     <span
-      className="group/badge inline-flex items-center gap-2 px-3 py-1.5 text-sm bg-[var(--surface-1)] border border-[var(--border)] rounded-lg hover:bg-[var(--surface-2)] transition-all duration-200 cursor-default font-[family-name:var(--font-code)]"
+      className="group/badge inline-flex items-center gap-2 px-3 py-1.5 text-base bg-[var(--surface-1)] border border-[var(--border)] rounded-lg hover:bg-[var(--surface-2)] transition-all duration-200 cursor-default font-[family-name:var(--font-code)]"
       style={
         {
           "--brand-color": brand?.color ?? "var(--accent)",
@@ -93,7 +93,7 @@ export default function TechStack() {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: catIndex * 0.1, duration: 0.4 }}
             >
-              <h3 className="text-sm font-semibold uppercase tracking-wider text-[var(--ink)]/40 mb-3 font-[family-name:var(--font-heading)]">
+              <h3 className="text-base font-semibold uppercase tracking-wider text-[var(--ink)]/40 mb-3 font-[family-name:var(--font-heading)]">
                 {t(category)}
               </h3>
               <div className="flex flex-wrap gap-2">

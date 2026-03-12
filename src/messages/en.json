@@ -85,17 +85,17 @@
         "name": "Supplie.me",
         "hook": "SaaS e-commerce platform with role-based auth and admin panel"
       },
-      "eventmanager": {
-        "name": "EventManager",
-        "hook": "Event management system with guest tracking and visual calendar"
+      "contextDistill": {
+        "name": "ContextDistill",
+        "hook": "CLI pipeline that converts PDF, DOCX, HTML & URLs into LLM-optimized Markdown with local OCR"
       },
-      "movieCatalog": {
-        "name": "Movie Catalog",
-        "hook": "Full REST API with Angular frontend and Laravel backend"
+      "precisionScroll": {
+        "name": "Precision Scroll Capture",
+        "hook": "Chromium extension that auto-scrolls and stitches long pages into a single screenshot"
       },
-      "hospitalSystem": {
-        "name": "Hospital System",
-        "hook": "Java/Spring Boot backend with React frontend for appointment management"
+      "gestureCommander": {
+        "name": "GestureCommander",
+        "hook": "Native macOS app for system control via multi-touch trackpad gestures with LaunchAgent"
       }
     }
   },

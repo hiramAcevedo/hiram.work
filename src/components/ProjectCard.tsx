@@ -1,15 +1,17 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import {
   ExternalLink,
   Github,
+  ArrowUpRight,
   Stethoscope,
   Languages,
   ShoppingCart,
-  Calendar,
-  Film,
-  Hospital,
+  FileText,
+  Scan,
+  Hand,
   type LucideIcon,
 } from "lucide-react";
 import type { Project } from "@/lib/projects";
@@ -18,9 +20,9 @@ const iconMap: Record<string, LucideIcon> = {
   Stethoscope,
   Languages,
   ShoppingCart,
-  Calendar,
-  Film,
-  Hospital,
+  FileText,
+  Scan,
+  Hand,
 };
 
 interface ProjectCardProps {
@@ -48,18 +50,33 @@ export default function ProjectCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ delay: index * 0.1, duration: 0.4 }}
-      className="group flex flex-col bg-[var(--surface-1)] border border-[var(--border)] rounded-xl overflow-hidden hover:border-[var(--accent)] hover:shadow-lg transition-all duration-300 hover:scale-[1.02]"
+      className="group relative flex flex-col bg-[var(--surface-1)] border border-[var(--border)] rounded-xl overflow-hidden hover:border-[var(--accent)] hover:shadow-lg transition-all duration-300 hover:scale-[1.02]"
     >
-      {/* Thumbnail placeholder */}
-      <div className="h-36 bg-gradient-to-br from-[var(--surface-2)] to-[var(--surface-1)] flex items-center justify-center relative overflow-hidden">
-        <div className="absolute inset-0 bg-[var(--accent)]/5" />
-        {Icon ? (
-          <Icon size={32} className="text-[var(--ink)]/20" />
-        ) : (
-          <span className="text-4xl font-bold text-[var(--ink)]/10 font-[family-name:var(--font-heading)]">
-            {name.charAt(0)}
-          </span>
-        )}
+      {/* Card-level link — whole card is clickable */}
+      <a
+        href={project.detailUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="absolute inset-0 z-10"
+        aria-label={`View ${name} details on HiramLab`}
+      />
+
+      {/* Project image thumbnail */}
+      <div className="h-44 relative overflow-hidden bg-[var(--surface-2)]">
+        <Image
+          src={project.image}
+          alt={name}
+          fill
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
+        />
+        {/* Subtle gradient overlay for readability */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[var(--surface-1)]/20 to-transparent" />
+        {/* Arrow indicator on hover */}
+        <ArrowUpRight
+          size={18}
+          className="absolute top-3 right-3 text-white/0 group-hover:text-white/80 transition-all duration-300 drop-shadow-md"
+        />
       </div>
 
       <div className="flex flex-col flex-1 p-5 gap-3">
@@ -81,7 +98,8 @@ export default function ProjectCard({
           ))}
         </div>
 
-        <div className="flex items-center gap-3 mt-2 pt-3 border-t border-[var(--border)]">
+        {/* Live / Code links — elevated above the card link */}
+        <div className="relative z-20 flex items-center gap-3 mt-2 pt-3 border-t border-[var(--border)]">
           {project.liveUrl && (
             <a
               href={project.liveUrl}

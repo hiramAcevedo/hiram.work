@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { Menu, X, Download, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import ThemeToggle from "./ThemeToggle";
@@ -12,6 +12,8 @@ const navItems = ["about", "experience", "education", "contact"] as const;
 
 export default function Header() {
   const t = useTranslations("header");
+  const locale = useLocale();
+  const cvPath = locale === "es" ? "/cv/Hiram_Acevedo_CV_ES.pdf" : "/cv/Hiram_Acevedo_CV.pdf";
   const [scrolled, setScrolled] = useState(false);
   const [pastHero, setPastHero] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -69,7 +71,7 @@ export default function Header() {
           {/* Download CV — slide-in before nav items */}
           <div className="overflow-hidden rounded-lg">
             <a
-              href="/cv/Hiram_Acevedo_CV.pdf"
+              href={cvPath}
               download
               className={`flex items-center gap-2 h-9 px-4 bg-[var(--accent)] text-white text-sm font-semibold rounded-lg hover:opacity-90 font-[family-name:var(--font-heading)] whitespace-nowrap transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
                 pastHero ? "translate-x-0" : "translate-x-[110%]"
@@ -244,7 +246,7 @@ export default function Header() {
                 <LocaleSwitch />
                 <ThemeToggle />
                 <a
-                  href="/cv/Hiram_Acevedo_CV.pdf"
+                  href={cvPath}
                   download
                   className="flex items-center gap-2 h-9 px-4 bg-[var(--accent)] text-white text-sm font-semibold rounded-lg font-[family-name:var(--font-heading)]"
                 >

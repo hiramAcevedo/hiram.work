@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { motion, AnimatePresence, LayoutGroup } from "framer-motion";
 import { Github, Linkedin, Download, ArrowDown } from "lucide-react";
 import LogoHA, { type LogoPhase } from "./LogoHA";
@@ -16,6 +16,8 @@ const LOOP_WAIT = 0.3;            // pause before ticker
 
 export default function Hero() {
   const t = useTranslations("hero");
+  const locale = useLocale();
+  const cvPath = locale === "es" ? "/cv/Hiram_Acevedo_CV_ES.pdf" : "/cv/Hiram_Acevedo_CV.pdf";
   const [split, setSplit] = useState(false);
   const [logoPhase, setLogoPhase] = useState<LogoPhase>("drawing");
   const [showInfo, setShowInfo] = useState(false);
@@ -129,7 +131,7 @@ export default function Hero() {
                   className="flex flex-wrap items-center justify-center lg:justify-start gap-3 mt-1"
                 >
                   <a
-                    href="/cv/Hiram_Acevedo_CV.pdf"
+                    href={cvPath}
                     download
                     className="flex items-center gap-2 px-5 py-2.5 bg-[var(--accent)] text-white font-semibold rounded-lg hover:opacity-90 transition-opacity font-[family-name:var(--font-heading)]"
                   >

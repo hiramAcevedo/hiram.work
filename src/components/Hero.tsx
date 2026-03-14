@@ -56,7 +56,7 @@ export default function Hero() {
       <LayoutGroup>
         <motion.div
           layout
-          className={`max-w-5xl w-full flex items-center gap-8 lg:gap-16 ${
+          className={`max-w-5xl w-full flex items-center gap-5 md:gap-8 lg:gap-16 ${
             split
               ? "flex-col lg:flex-row lg:justify-start lg:items-start"
               : "flex-col lg:flex-row lg:justify-center"
@@ -77,7 +77,7 @@ export default function Hero() {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.6, delay: 0.1 }}
-                  className="-mt-[44px]"
+                  className="-mt-[36px] md:-mt-[44px]"
                 >
                   <SkillTicker />
                 </motion.div>
@@ -92,7 +92,7 @@ export default function Hero() {
                 initial={{ opacity: 0, x: 40, filter: "blur(8px)" }}
                 animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
                 transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-                className="flex flex-col items-center lg:items-start text-center lg:text-left gap-5 flex-1"
+                className="flex flex-col items-center lg:items-start text-center lg:text-left gap-3 md:gap-5 flex-1"
               >
                 <div>
                   {/* Hidden on mobile — logo wordmark already has the name */}
@@ -108,7 +108,7 @@ export default function Hero() {
                     initial={{ opacity: 0, y: 15 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
-                    className="text-2xl md:text-3xl text-[var(--accent)] font-semibold font-[family-name:var(--font-heading)] lg:mt-2"
+                    className="text-xl md:text-3xl text-[var(--accent)] font-semibold font-[family-name:var(--font-heading)] lg:mt-2"
                   >
                     {t("subtitle")}
                   </motion.p>
@@ -118,44 +118,54 @@ export default function Hero() {
                   initial={{ opacity: 0, y: 15 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.35 }}
-                  className="text-xl md:text-2xl text-[var(--ink)]/60 max-w-md leading-relaxed"
+                  className="text-base md:text-2xl text-[var(--ink)]/60 max-w-md leading-snug md:leading-relaxed"
                 >
                   {t("tagline")}
                 </motion.p>
 
-                {/* Primary CTAs */}
+                {/* Primary CTAs — mobile: CV | stacked socials · desktop: 3 inline */}
                 <motion.div
                   initial={{ opacity: 0, y: 15 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.5, duration: 0.5 }}
-                  className="flex flex-wrap items-center justify-center lg:justify-start gap-3 mt-1"
+                  className="flex items-center justify-center lg:justify-start gap-3 mt-1"
                 >
+                  {/* CV Download — always full */}
                   <a
                     href={cvPath}
                     download
-                    className="flex items-center gap-2 px-5 py-2.5 bg-[var(--accent)] text-white font-semibold rounded-lg hover:opacity-90 transition-opacity font-[family-name:var(--font-heading)]"
+                    className="flex items-center gap-2 px-5 py-2.5 md:py-2.5 bg-[var(--accent)] text-white font-semibold rounded-lg hover:opacity-90 transition-opacity font-[family-name:var(--font-heading)]"
                   >
                     <Download size={16} />
                     {t("downloadCV")}
                   </a>
-                  <a
-                    href="https://linkedin.com/in/hiram-acevedo"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-5 py-2.5 border border-[var(--border)] rounded-lg font-semibold hover:bg-[var(--surface-1)] hover:border-[#0A66C2] hover:text-[#0A66C2] transition-all font-[family-name:var(--font-heading)]"
-                  >
-                    <Linkedin size={16} />
-                    LinkedIn
-                  </a>
-                  <a
-                    href="https://github.com/hiramAcevedo"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-5 py-2.5 border border-[var(--border)] rounded-lg font-semibold hover:bg-[var(--surface-1)] hover:border-[var(--ink)] transition-all font-[family-name:var(--font-heading)]"
-                  >
-                    <Github size={16} />
-                    GitHub
-                  </a>
+
+                  {/* Divider — mobile only */}
+                  <div className="w-px h-9 bg-[var(--border)] md:hidden" />
+
+                  {/* Social buttons — stacked on mobile, inline on desktop */}
+                  <div className="flex flex-col md:flex-row gap-1.5 md:gap-3">
+                    <a
+                      href="https://linkedin.com/in/hiram-acevedo"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="LinkedIn"
+                      className="flex items-center gap-2 px-3 py-1.5 md:px-5 md:py-2.5 border border-[var(--border)] rounded-lg text-sm md:text-base font-semibold hover:bg-[var(--surface-1)] hover:border-[#0A66C2] hover:text-[#0A66C2] transition-all font-[family-name:var(--font-heading)]"
+                    >
+                      <Linkedin size={14} className="md:w-4 md:h-4" />
+                      LinkedIn
+                    </a>
+                    <a
+                      href="https://github.com/hiramAcevedo"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="GitHub"
+                      className="flex items-center gap-2 px-3 py-1.5 md:px-5 md:py-2.5 border border-[var(--border)] rounded-lg text-sm md:text-base font-semibold hover:bg-[var(--surface-1)] hover:border-[var(--ink)] transition-all font-[family-name:var(--font-heading)]"
+                    >
+                      <Github size={14} className="md:w-4 md:h-4" />
+                      GitHub
+                    </a>
+                  </div>
                 </motion.div>
 
                 {/* Secondary links */}
@@ -163,7 +173,7 @@ export default function Hero() {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.7, duration: 0.4 }}
-                  className="text-base text-[var(--ink)]/40 mt-1"
+                  className="text-sm md:text-base text-[var(--ink)]/40 mt-0 md:mt-1"
                 >
                   <a
                     href="mailto:hiram@hiram.work"
@@ -192,7 +202,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: showInfo ? 1 : 0 }}
         transition={{ delay: showInfo ? 1.0 : 0, duration: 0.5 }}
-        className="absolute bottom-6 md:bottom-12"
+        className="absolute bottom-3 md:bottom-12"
       >
         <a
           href="#about"
@@ -260,9 +270,9 @@ function SkillTicker() {
             <Tag
               key={`${skill.label}-${i}`}
               {...extraProps}
+              className="ticker-chip"
               style={{
                 display: "inline-block",
-                padding: "6px 16px",
                 fontSize: "16px",
                 fontFamily: "var(--font-heading)",
                 fontWeight: 600,
@@ -309,6 +319,16 @@ function SkillTicker() {
         @keyframes tickerScroll {
           0% { transform: translateX(0); }
           100% { transform: translateX(-50%); }
+        }
+        .ticker-chip {
+          padding: 4px 10px;
+          font-size: 13px;
+        }
+        @media (min-width: 768px) {
+          .ticker-chip {
+            padding: 6px 16px;
+            font-size: 16px;
+          }
         }
       `}</style>
     </div>

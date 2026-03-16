@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="255 160 491 626" width="32" height="41">
+  <style>
+    @media (prefers-color-scheme: light) {
+      :root { --ink: #000000; --bg: #fffdfa; --accent: #9d4d14; --frame-fill: var(--bg); --frame-border: var(--accent); --accent-swap: var(--accent); }
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --ink: #FFFFFF; --bg: #0c0b10; --accent: #bf580e; --frame-fill: var(--accent); --frame-border: var(--ink); --accent-swap: #000000; }
+    }
+  </style>
+  <!-- 1 Frame -->
+  <g transform="matrix(1.719678,0,0,2.212168,-111.887241,-201.882752)">
+    <rect x="219" y="168" width="274" height="274" fill="var(--frame-fill)"/>
+    <path d="M493,168L493,442L219,442L219,168L493,168ZM491.546,169.13L220.454,169.13L220.454,440.87L491.546,440.87L491.546,169.13Z" fill="var(--frame-border)"/>
+  </g>
+  <!-- 2 Accent triangle -->
+  <g transform="matrix(-1.704792,-0.540121,0.304807,-0.62556,1025.679261,1211.351569)">
+    <path d="M490,574L404,369L319,642L490,574Z" fill="var(--accent-swap)"/>
+  </g>
+  <!-- 3 H left vertical -->
+  <g transform="matrix(1.283057,0,0,1.983604,-129.7073,-521.300152)">
+    <rect x="335" y="364" width="50" height="271" fill="var(--ink)"/>
+  </g>
+  <!-- 4 H right / A upper vertical -->
+  <g transform="matrix(1.205551,0,0,1.461173,25.157384,-401.819575)">
+    <rect x="335" y="364" width="50" height="271" fill="var(--ink)"/>
+  </g>
+  <!-- 5 A diagonal stroke -->
+  <g transform="matrix(0.975225,-0.569534,0.345962,0.592399,-18.046918,478.461077)">
+    <rect x="335" y="364" width="50" height="271" fill="var(--ink)"/>
+    <clipPath id="c1">
+      <rect x="335" y="364" width="50" height="271"/>
+    </clipPath>
+    <g clip-path="url(#c1)">
+      <g transform="matrix(0.235847,-0.815171,0.202185,0.223378,301.657441,904.516094)">
+        <path d="M490,574L404,369L319,642L490,574Z" fill="var(--frame-fill)"/>
+      </g>
+    </g>
+  </g>
+  <!-- 6 Horizontal bar -->
+  <g transform="matrix(1.029514,0,0,0.889765,306.885103,24.355545)">
+    <rect x="335" y="364" width="50" height="271" fill="var(--ink)"/>
+  </g>
+  <!-- 7 Connector horizontal bar -->
+  <g transform="matrix(0,-1.141206,1.177967,0,-121.491575,912.342963)">
+    <rect x="335" y="364" width="50" height="271" fill="var(--ink)"/>
+  </g>
+  <!-- 8 Quarter circle arc -->
+  <g transform="matrix(-1.4391,-1.4391,1.4391,-1.4391,494.478267,1889.140205)">
+    <path d="M426.645,571.355L444.322,553.678C449.011,558.366 455.37,561 462,561C475.798,561 487,549.798 487,536C487,529.37 484.366,523.011 479.678,518.322L497.355,500.645C506.732,510.021 512,522.739 512,536C512,563.596 489.596,586 462,586C448.739,586 436.021,580.732 426.645,571.355Z" fill="var(--ink)"/>
+  </g>
+  <!-- 9 Node lower-left -->
+  <g transform="matrix(-1.564239,1.564239,-1.564239,-1.564239,383.094594,741.411909)">
+    <circle cx="0" cy="0" r="4.95" fill="var(--accent-swap)"/>
+    <path d="M0,-4.95C2.732,-4.95 4.95,-2.732 4.95,0C4.95,2.732 2.732,4.95 0,4.95C-2.732,4.95 -4.95,2.732 -4.95,0C-4.95,-2.732 -2.732,-4.95 0,-4.95ZM0,-3.82C-2.108,-3.82 -3.82,-2.108 -3.82,0C-3.82,2.108 -2.108,3.82 0,3.82C2.108,3.82 3.82,2.108 3.82,0C3.82,-2.108 2.108,-3.82 0,-3.82Z" fill="var(--ink)"/>
+  </g>
+  <!-- 10 Node upper-right -->
+  <g transform="matrix(-1.564239,1.564239,-1.564239,-1.564239,597.883766,444.303585)">
+    <circle cx="0" cy="0" r="4.95" fill="var(--accent-swap)"/>
+    <path d="M0,-4.95C2.732,-4.95 4.95,-2.732 4.95,0C4.95,2.732 2.732,4.95 0,4.95C-2.732,4.95 -4.95,2.732 -4.95,0C-4.95,-2.732 -2.732,-4.95 0,-4.95ZM0,-3.82C-2.108,-3.82 -3.82,-2.108 -3.82,0C-3.82,2.108 -2.108,3.82 0,3.82C2.108,3.82 3.82,2.108 3.82,0C3.82,-2.108 2.108,-3.82 0,-3.82Z" fill="var(--ink)"/>
+  </g>
+</svg>
